@@ -5,3 +5,7 @@ INSERT INTO evento (id,cpf,nome,dia,mes,ano,distancia,horas,minutos,segundos) VA
 INSERT INTO evento (id,cpf,nome,dia,mes,ano,distancia,horas,minutos,segundos) VALUES (3,'112233','Winter Day Run',25,7,2019,5,0,28,3);
 INSERT INTO evento (id,cpf,nome,dia,mes,ano,distancia,horas,minutos,segundos) VALUES (4,'112233','Spring Nigth Run',30,9,2019,5,0,29,32);
 INSERT INTO evento (id,cpf,nome,dia,mes,ano,distancia,horas,minutos,segundos) VALUES (5,'112233','Summer Day Run',4,12,2019,5,0,26,18);
+INSERT INTO rota (nome,origem,destino) VALUES ('1','Rio-branco','Rio-negro');
+INSERT INTO rota (nome,origem,destino) VALUES ('2','poa','nilo');
+INSERT INTO rota (nome,origem,destino) VALUES ('3','tocantins','tocantao');
+INSERT INTO rota (nome,origem,destino) VALUES ('4','poa','ny');
