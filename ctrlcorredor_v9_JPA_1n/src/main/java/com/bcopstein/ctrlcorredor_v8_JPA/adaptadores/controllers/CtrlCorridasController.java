@@ -8,10 +8,12 @@ import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.ConsultaCorredores
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.ConsultaEstatisticasUC;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.ConsultaEventosUC;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.ConsultaPerformanceUC;
+import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.ConsultarRotas;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.EstatisticasDTO;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.PerformanceDTO;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.Corredor;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.Evento;
+import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.Rota;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -31,24 +33,33 @@ public class CtrlCorridasController {
     private CadastraEventoUC cadastraEventoUC;
     private ConsultaEstatisticasUC consultaEstatisticasUC;
     private ConsultaPerformanceUC consultaPerformanceUC;
+    private ConsultarRotas consultarRotas;
     
     @Autowired
     public CtrlCorridasController(ConsultaCorredoresUC consultaCorredoresUC, CadastraCorredoresUC cadastraCorredoresUC,
             ConsultaEventosUC consultaEventosUC, CadastraEventoUC cadastraEventoUC,
-            ConsultaEstatisticasUC consultaEstatisticasUC, ConsultaPerformanceUC consultaPerformanceUC) {
+            ConsultaEstatisticasUC consultaEstatisticasUC, ConsultaPerformanceUC consultaPerformanceUC,
+            ConsultarRotas consultarRotas) {
         this.consultaCorredoresUC = consultaCorredoresUC;
         this.cadastraCorredoresUC = cadastraCorredoresUC;
         this.consultaEventosUC = consultaEventosUC;
         this.cadastraEventoUC = cadastraEventoUC;
         this.consultaEstatisticasUC = consultaEstatisticasUC;
         this.consultaPerformanceUC = consultaPerformanceUC;
+        this.consultarRotas=consultarRotas;
     }
 
+    @GetMapping("/rota")
+    @CrossOrigin(origins = "*")
+    public List<Rota> consultaRotas(@RequestBody String origem, @RequestBody String destino) {
+        return consultarRotas.run(origem,destino);
+    }
     @GetMapping("/corredor")
     @CrossOrigin(origins = "*")
     public List<Corredor> consultaCorredor() {
         return consultaCorredoresUC.run();
     }
+
   
 
     @PostMapping("/corredor")
