@@ -51,9 +51,9 @@ public class CtrlCorridasController {
 
     @GetMapping("/rota")
     @CrossOrigin(origins = "*")
-    public List<Rota> consultaRotas() {
-        String origem="a";
-        String destino="b";
+    public List<Rota> consultaRotas(@RequestParam String origem, @RequestParam String destino){
+        //String origem="a";
+        //String destino="b";
         return consultarRotas.run(origem,destino);
     }
     @GetMapping("/corredor")
