@@ -16,8 +16,7 @@ public class Rota{
     this.destino=destino;
   }
 
-  public Rota(){
-  }
+  public Rota(){}
   
   public String getNome() {
     return nome;
