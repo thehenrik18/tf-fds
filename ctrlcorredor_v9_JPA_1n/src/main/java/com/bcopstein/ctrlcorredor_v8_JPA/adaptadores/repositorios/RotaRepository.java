@@ -20,7 +20,7 @@ public class RotaRepository implements IRotaRepository {
     }
 
     @Override
-    public List<Rota> ConsultarRotas(String origem, String destino) {
+    public List<Rota> todas() {
         return rotaCrud.findAll();
     }
 
