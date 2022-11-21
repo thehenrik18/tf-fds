@@ -1,5 +1,6 @@
 package com.bcopstein.ctrlcorredor_v8_JPA.adaptadores.repositorios;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,11 @@ public class RotaRepository implements IRotaRepository {
     @Override
     public List<Rota> ConsultarRotas(String origem, String destino) {
         return rotaCrud.findAll();
+    }
+
+    @Override
+    public List<Integer> consultaSlotsLivres(int aeroViaId, Date hPartida, int velocidade, int sentido) {
+        return null;
     }
 
     

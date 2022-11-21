@@ -2,10 +2,14 @@ package com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class OcupacaoAeroVia {
+    @Id
+    int idOcupacao;
     Date data;
     int altitude;
-    int idOcupacao;
     Date hora;
     
     public OcupacaoAeroVia(Date data, int altitude, int idOcupacao, Date hora) {

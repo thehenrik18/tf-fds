@@ -1,6 +1,11 @@
 package com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class AeroPorto {
+    @Id
     String nome;
     int idRefgeo;
     String localizacao;

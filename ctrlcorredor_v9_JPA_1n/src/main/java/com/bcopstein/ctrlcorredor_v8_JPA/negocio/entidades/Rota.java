@@ -2,7 +2,6 @@ package com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-
 @Entity
 public class Rota{
   @Id
@@ -24,10 +23,7 @@ public class Rota{
   public String getOrigem() {
       return origem;
   }
-
   public String getDestino() {
       return destino;
   }
-
-
 }

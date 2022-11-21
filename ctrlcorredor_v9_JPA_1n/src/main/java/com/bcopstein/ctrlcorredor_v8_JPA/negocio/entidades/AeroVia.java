@@ -2,7 +2,11 @@ package com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class AeroVia {
+    @Id
     String idAeroVia;
     RefGeo origem;
     RefGeo destino;
