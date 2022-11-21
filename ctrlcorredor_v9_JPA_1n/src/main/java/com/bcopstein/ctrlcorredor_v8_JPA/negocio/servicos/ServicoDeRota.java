@@ -1,6 +1,5 @@
 package com.bcopstein.ctrlcorredor_v8_JPA.negocio.servicos;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +21,11 @@ public class ServicoDeRota {
     }
    
     public List<Rota> ConsultarRotas(String origem, String destino) {
-        List<Rota> rotas=rotaRep.todas();
 
-        return rotas.stream().filter(r->r.getOrigem()).filter(r->r.getDestino()).toList();
-       ;
+        return rotaRep.todas().stream()
+        .filter(r->r.getOrigem().equals(origem))
+        .filter(r->r.getDestino().equals(destino))
+        .toList();       
 
-        return rotas;
     }
 }
