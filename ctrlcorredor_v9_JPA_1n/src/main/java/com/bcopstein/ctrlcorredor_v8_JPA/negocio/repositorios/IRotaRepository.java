@@ -6,6 +6,6 @@ import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.Rota;
 
 
 public interface IRotaRepository {
-    List<Rota> ConsultarRotas(String origem, String destino);
+    List<Rota> todas();
 
 }

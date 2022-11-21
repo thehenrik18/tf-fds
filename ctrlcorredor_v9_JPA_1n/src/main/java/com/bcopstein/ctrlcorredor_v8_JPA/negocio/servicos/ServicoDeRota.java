@@ -22,14 +22,11 @@ public class ServicoDeRota {
     }
    
     public List<Rota> ConsultarRotas(String origem, String destino) {
-        List<Rota> rotas=rotaRep.ConsultarRotas( origem,  destino);
-        List<Rota> filtro=new ArrayList<Rota>();
-       
-        for (Rota rota : rotas) {
-            if(rota.getOrigem().equals(origem) && rota.getDestino().equals(destino)) {
-                filtro.add(rota);
-            }
-        }
-        return filtro;
+        List<Rota> rotas=rotaRep.todas();
+
+        return rotas.stream().filter(r->r.getOrigem()).filter(r->r.getDestino()).toList();
+       ;
+
+        return rotas;
     }
 }
