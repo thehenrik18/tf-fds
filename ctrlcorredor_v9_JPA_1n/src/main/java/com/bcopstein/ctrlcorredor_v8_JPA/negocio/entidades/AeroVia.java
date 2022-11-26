@@ -7,39 +7,50 @@ import javax.persistence.Id;
 @Entity
 public class AeroVia {
     @Id
-    String idAeroVia;
-    RefGeo origem;
-    RefGeo destino;
-    float distancia;
-    List<OcupacaoAeroVia> ocupacao;
-    int sentido;
+   public  String idAeroVia;
+   public  float LongOrigem;
+   public float latiOrigem;
+   public float LongDestino;
+   public float latiDestino;
+   public float distancia;
+   public List<Integer> IdsOcupacao;
+   public int sentido;
 
-    public AeroVia(String idAeroVia, RefGeo origem, RefGeo destino, float distancia, List<OcupacaoAeroVia> ocupacao,
-            int sentido) {
+public AeroVia(String idAeroVia, float longOrigem, float latiOrigem, float longDestino, float latiDestino, float distancia,
+            List<Integer> ocupacao, int sentido) {
         this.idAeroVia = idAeroVia;
-        this.origem = origem;
-        this.destino = destino;
+        LongOrigem = longOrigem;
+        this.latiOrigem = latiOrigem;
+        LongDestino = longDestino;
+        this.latiDestino = latiDestino;
         this.distancia = distancia;
-        this.ocupacao = ocupacao;
+        this.IdsOcupacao = ocupacao;
         this.sentido = sentido;
     }
     public AeroVia(){
     }
-    public RefGeo getDestino() {
-        return destino;
-    }
+public float getLatiDestino() {
+    return latiDestino;
+}
+public float getLatiOrigem() {
+    return latiOrigem;
+}
+public float getLongDestino() {
+    return LongDestino;
+}
+public float getLongOrigem() {
+    return LongOrigem;
+}
     public float getDistancia() {
         return distancia;
     }
     public String getIdAeroVia() {
         return idAeroVia;
     }
-    public List<OcupacaoAeroVia> getOcupacao() {
-        return ocupacao;
+    public List<Integer> getOcupacao() {
+        return IdsOcupacao;
     }
-    public RefGeo getOrigem() {
-        return origem;
-    }
+ 
     public int getSentido() {
         return sentido;
     }

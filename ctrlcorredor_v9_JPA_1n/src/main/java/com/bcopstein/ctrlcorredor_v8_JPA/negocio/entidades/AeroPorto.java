@@ -7,20 +7,25 @@ import javax.persistence.Id;
 public class AeroPorto {
     @Id
     String nome;
-    int idRefgeo;
+    float latitude;
+    float longitude;
     String localizacao;
 
-    public AeroPorto(String nome, int idRefgeo, String localizacao) {
+   public AeroPorto (String nome, float latitude, float longitude, String localizacao) {
         this.nome = nome;
-        this.idRefgeo = idRefgeo;
+        this.latitude = latitude;
+        this.longitude = longitude;
         this.localizacao = localizacao;
     }
     public AeroPorto(){
     }
     
-    public int getIdRefgeo() {
-        return idRefgeo;
-    }
+   public float getLatitude() {
+       return latitude;
+   }
+   public float getLongitude() {
+       return longitude;
+   }
     public String getLocalizacao() {
         return localizacao;
     }
