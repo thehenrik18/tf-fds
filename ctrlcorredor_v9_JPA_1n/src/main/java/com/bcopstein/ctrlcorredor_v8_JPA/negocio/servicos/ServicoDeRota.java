@@ -21,6 +21,7 @@ public class ServicoDeRota {
     }
    
     public List<Rota> ConsultarRotas(String origem, String destino) {
+        
         return rotaRep.todas().stream()
             .filter(r->r.getOrigem().equals(origem))
             .filter(r->r.getDestino().equals(destino))
