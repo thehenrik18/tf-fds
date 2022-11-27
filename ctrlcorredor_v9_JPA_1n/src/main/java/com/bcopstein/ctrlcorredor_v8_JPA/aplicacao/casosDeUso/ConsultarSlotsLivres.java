@@ -1,18 +1,16 @@
 package com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso;
 
 import java.util.Date;
-import java.util.List;
-
-import com.bcopstein.ctrlcorredor_v8_JPA.negocio.servicos.ServicoAeroVia;
-
+import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.SlotsLivresDTO;
+import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.servicos.SlotsDTOServico;
 public class ConsultarSlotsLivres {
-    private ServicoAeroVia servicoAeroVia;
+    private SlotsDTOServico slotsDTOServico;
 
-    public ConsultarSlotsLivres(ServicoAeroVia servicoDeRota) {
-        this.servicoAeroVia = servicoDeRota;
+    public ConsultarSlotsLivres(SlotsDTOServico slotsDTOServico) {
+        this.slotsDTOServico = slotsDTOServico;
     }
-    public List<Integer> run (String idAeroVia,Date horaPartida){
-        return servicoAeroVia.ConsultarSlotsLivres( idAeroVia, horaPartida);
+    public SlotsLivresDTO run (String idAeroVia,Date horaPartida){
+        return slotsDTOServico.ConsultarSlotsLivres( idAeroVia, horaPartida);
         
     }
 }

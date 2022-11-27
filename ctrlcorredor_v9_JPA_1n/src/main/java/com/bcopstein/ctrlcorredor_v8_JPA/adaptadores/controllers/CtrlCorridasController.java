@@ -7,6 +7,8 @@ import java.util.List;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.ConsultarRotas;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.ConsultarSlotsLivres;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.RotaDTO;
+import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.SlotsLivresDTO;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,7 +39,7 @@ public class CtrlCorridasController {
     }
     @GetMapping("/slotsLivres")
     @CrossOrigin(origins = "*")
-    public List<Integer> consultarSlotsLivres(@RequestParam String idAeroVia,@RequestParam Date horaPartida){
+    public SlotsLivresDTO consultarSlotsLivres(@RequestParam String idAeroVia,@RequestParam Date horaPartida){
         //String origem="a";
         //String destino="b";
         return consultarSlotsLivres.run( idAeroVia, horaPartida);
