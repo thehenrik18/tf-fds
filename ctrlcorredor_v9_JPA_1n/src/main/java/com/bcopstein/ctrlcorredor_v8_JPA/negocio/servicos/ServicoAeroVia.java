@@ -10,12 +10,10 @@ import org.springframework.stereotype.Component;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.AeroVia;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.OcupacaoAeroVia;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.repositorios.IAeroviaRepository;
-import com.bcopstein.ctrlcorredor_v8_JPA.negocio.repositorios.IocupacaoRepository;
 
 @Component
 public class ServicoAeroVia {
     private IAeroviaRepository aeroviaRepository;
-    private IocupacaoRepository ocupacaoRepository;
 
     @Autowired
     public ServicoAeroVia(IAeroviaRepository aeroviaRepository) {

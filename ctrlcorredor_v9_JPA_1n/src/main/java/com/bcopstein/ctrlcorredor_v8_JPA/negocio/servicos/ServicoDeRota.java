@@ -20,11 +20,15 @@ public class ServicoDeRota {
      
     }
    
-    public List<Rota> ConsultarRotas(String origem, String destino) {
+    public List<Rota> ConsultarRotas() {
         
+        /* 
         return rotaRep.todas().stream()
             .filter(r->r.getOrigem().equals(origem))
             .filter(r->r.getDestino().equals(destino))
             .toList();
+            */
+            return rotaRep.todas();
+
     }
 }
