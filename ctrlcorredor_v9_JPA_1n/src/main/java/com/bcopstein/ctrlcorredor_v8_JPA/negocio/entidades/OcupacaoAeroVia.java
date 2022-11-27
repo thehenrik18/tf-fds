@@ -10,9 +10,9 @@ public class OcupacaoAeroVia {
     int idOcupacao;
     Date data;
     int altitude;
-    Date hora;
+    int hora;
     
-    public OcupacaoAeroVia(Date data, int altitude, int idOcupacao, Date hora) {
+    public OcupacaoAeroVia(Date data, int altitude, int idOcupacao, int hora) {
         this.data = data;
         this.altitude = altitude;
         this.idOcupacao = idOcupacao;
@@ -26,7 +26,7 @@ public class OcupacaoAeroVia {
     public Date getData() {
         return data;
     }
-    public Date getHora() {
+    public int getHora() {
         return hora;
     }
     public int getIdOcupacao() {

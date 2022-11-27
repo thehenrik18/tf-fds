@@ -31,7 +31,7 @@ public RotaDTO consultarRotas(String origem, String destino){
     //cria uma lista que pega o nome dessas rotas
     List<String> nomesRotas=new ArrayList<String>();
     for(Rota rota:rotas){
-        nomesRotas.add(rota.getIdRota());
+        nomesRotas.add(((Integer) rota.getIdRota()).toString());
     }
 
     //se a lista for vazia adiciona apenas mensagem de erro

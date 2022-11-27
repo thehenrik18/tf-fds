@@ -15,12 +15,12 @@ import java.util.List;
 @Entity
 public class Rota{
   @Id
-  private String idRota;
+  private int idRota;
   private String idOrigemAero;// uma rota tem um inicio e um fim, sendo esses locais dois aeroportos distintos
   private  String idDestinoAero;
  
 
-  public Rota(String idRota, String origem, String destino) {
+  public Rota(int idRota, String origem, String destino) {
     this.idRota = idRota;
     this.idOrigemAero = origem;
     this.idDestinoAero = destino;
@@ -34,11 +34,12 @@ public class Rota{
   @JoinTable(name = "rota_aeroVia",joinColumns = {@JoinColumn(name="idRota")},inverseJoinColumns = 
   {@JoinColumn(name="idAeroVia")})
    private List<AeroVia> IdsAerovias;
- public String getIdRota() {
+   
+ public int getIdRota() {
      return idRota;
  }
 
-  public List<AeroVia> getIdsAerovias() {
+  public List<AeroVia> getAerovias() {
       return IdsAerovias;
   }
  public String getDestino() {

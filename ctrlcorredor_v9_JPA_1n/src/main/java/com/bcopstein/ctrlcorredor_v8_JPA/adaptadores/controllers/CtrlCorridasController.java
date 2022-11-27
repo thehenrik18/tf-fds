@@ -1,18 +1,13 @@
 package com.bcopstein.ctrlcorredor_v8_JPA.adaptadores.controllers;
 
 import java.util.Date;
-import java.util.List;
-
-
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.ConsultarRotas;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.ConsultarSlotsLivres;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.RotaDTO;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.SlotsLivresDTO;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,15 +28,13 @@ public class CtrlCorridasController {
     @GetMapping("/rota")
     @CrossOrigin(origins = "*")
     public RotaDTO consultaRotas(@RequestParam String origem, @RequestParam String destino){
-        //String origem="a";
-        //String destino="b";
+        
         return consultarRotas.run(origem,destino);
     }
     @GetMapping("/slotsLivres")
     @CrossOrigin(origins = "*")
     public SlotsLivresDTO consultarSlotsLivres(@RequestParam String idAeroVia,@RequestParam Date horaPartida){
-        //String origem="a";
-        //String destino="b";
+        
         return consultarSlotsLivres.run( idAeroVia, horaPartida);
     }
     

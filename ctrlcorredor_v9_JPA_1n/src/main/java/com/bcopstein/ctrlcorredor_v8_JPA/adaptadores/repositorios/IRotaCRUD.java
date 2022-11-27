@@ -9,4 +9,5 @@ import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.Rota;
 
 public interface IRotaCRUD extends CrudRepository<Rota,String> {
     List<Rota> findAll();
+    Rota findById(int idRota);
 }

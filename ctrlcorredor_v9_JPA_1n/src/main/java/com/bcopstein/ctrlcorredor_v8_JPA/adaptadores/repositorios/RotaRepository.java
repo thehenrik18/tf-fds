@@ -28,6 +28,15 @@ public class RotaRepository implements IRotaRepository {
     public List<Integer> consultaSlotsLivres(int aeroViaId, Date hPartida, int velocidade, int sentido) {
         return null;
     }
+    
+    @Override
+    public Rota obterRota(int idRota) {
+        return rotaCrud.findById(idRota);
+    }
+
+
+
+   
 
     
 }
