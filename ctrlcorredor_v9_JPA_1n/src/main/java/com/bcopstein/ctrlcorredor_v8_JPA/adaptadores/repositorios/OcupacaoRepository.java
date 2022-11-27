@@ -17,6 +17,7 @@ public class OcupacaoRepository implements IocupacaoRepository{
     @Override
     public OcupacaoAeroVia obterOcupacao(int idOcupacao) {
         return this.ocupacaoCRUD.findById( idOcupacao);
-    }   
-    
+    }
+
+     
 }

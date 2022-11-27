@@ -29,34 +29,32 @@ public class ServicoAeroVia {
     }
 
     public List<Integer> ConsultarSlotsLivres(String idAeroVia,Date horaPartida){
-        
-        //obtém a aerovia com base no identificador
+        //obtem a respectiva aerovia com sua pk
         AeroVia escolhida= aeroviaRepository.obterAeroVia(idAeroVia);
 
-        //instancia uma lista com os slots ocupados
+        //instancia uma lista que guardará os slots ocupados  
         List<Integer>ocupados=new ArrayList<Integer>();
 
-        //instancia uma lista com os slots livres
+       //instancia uma lista com os slots que serão disponiveis
         List<Integer> disponiveis=new ArrayList<Integer>();
 
-        //para cada id pega a ocupacao
-        //apenas se a hora for a mesma que a hora de partida
-        //pois só assim estaria ocupado
-        for (Integer idOcupacao : escolhida.IdsOcupacao) {
-            OcupacaoAeroVia ocupado=ocupacaoRepository.obterOcupacao(idOcupacao);
-            if(ocupado.getData()==horaPartida){
-                ocupados.add(ocupado.getAltitude());
+        //para cada ocupacao da aerovia
+        for (OcupacaoAeroVia Ocupacao : escolhida.getOcupacoes()) {
+            
+            //se a data de partida for igual a data contida nesta ocupacao
+            //então o slot esta ocupado e é adicionado a lista de ocupados
+            if(Ocupacao.getData()==horaPartida){
+                ocupados.add(Ocupacao.getAltitude());
             }
         }
         
-        //popula a lista de disponiveis com todas as altitudes possiveis
+        //popula a lista de disponiveis com todas altitudes disponiveis
         for(int i=1;i<=10;i++){disponiveis.add(i);}
 
-        //remove todas as altitudes ocupadas da lista de disponiveis
+        //remove todos os elementos ocupados da lista de disponiveis
         disponiveis.removeAll(ocupados);
-       
-        //retorna os disponiveis
         return disponiveis;        
+        
     }
 
     public void populaListaAerovias(){
@@ -75,7 +73,7 @@ public class ServicoAeroVia {
         aeroVia.LongDestino=2;
         aeroVia.latiDestino=2;
         aeroVia.distancia=1;
-        aeroVia.IdsOcupacao=numeros;
+        //aeroVia.IdsOcupacao=numeros;
         aerovias.add(aeroVia);
 
 
@@ -88,7 +86,7 @@ public class ServicoAeroVia {
         numeros.add(1);
         numeros.add(2);
         numeros.add(5);
-        aeroVia.IdsOcupacao=numeros;
+        //aeroVia.IdsOcupacao=numeros;
 
         aerovias.add(aeroVia);
         

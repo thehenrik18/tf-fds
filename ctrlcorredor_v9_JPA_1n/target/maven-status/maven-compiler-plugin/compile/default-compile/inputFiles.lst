@@ -1,14 +1,24 @@
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\adaptadores\controllers\CtrlCorridasController.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\repositorios\IRotaRepository.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\entidades\Rota.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\entidades\OcupacaoAeroVia.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\CtrlcorredorV7Application.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\entidades\AeroVia.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\adaptadores\repositorios\IRotaCRUD.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\adaptadores\repositorios\RotaRepository.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\aplicacao\casosDeUso\ConsultarRotas.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\entidades\RefGeo.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\aplicacao\dtos\PerformanceDTO.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\aplicacao\dtos\EstatisticasDTO.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\entidades\AeroPorto.java
-C:\Users\henri\OneDrive\햞ea de Trabalho\pfvjesusfunciona\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\servicos\ServicoDeRota.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\adaptadores\controllers\CtrlCorridasController.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\adaptadores\repositorios\RotaRepository.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\aplicacao\casosDeUso\ConsultarSlotsLivres.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\entidades\Rota.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\adaptadores\repositorios\IAeroViaCRUD.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\aplicacao\dtos\PerformanceDTO.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\adaptadores\repositorios\IOcupacaoCRUD.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\servicos\ServicoPlanoVoo.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\entidades\RefGeo.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\aplicacao\casosDeUso\ConsultarRotas.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\entidades\AeroVia.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\repositorios\IRotaRepository.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\adaptadores\repositorios\IRotaCRUD.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\entidades\AeroPorto.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\entidades\OcupacaoAeroVia.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\repositorios\IAeroviaRepository.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\repositorios\IocupacaoRepository.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\adaptadores\repositorios\IAeroViaRepository.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\servicos\ServicoAeroVia.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\servicos\ServicoDeRota.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\adaptadores\repositorios\OcupacaoRepository.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\aplicacao\dtos\EstatisticasDTO.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\CtrlcorredorV7Application.java
+C:\Users\henri\OneDrive\Documentos\tf-fds\tf-fds\ctrlcorredor_v9_JPA_1n\src\main\java\com\bcopstein\ctrlcorredor_v8_JPA\negocio\repositorios\IPlanoVooRepository.java
