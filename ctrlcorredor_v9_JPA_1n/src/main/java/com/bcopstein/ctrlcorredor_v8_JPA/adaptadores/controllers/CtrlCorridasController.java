@@ -8,6 +8,9 @@ import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.LiberarPlanoDTO;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.RotaDTO;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.SlotsLivresDTO;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.PlanoDeVoo;
+import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.CadastraPlanoVoo;
+import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.CancelaPlanoVoo;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,6 +28,8 @@ public class CtrlCorridasController {
     private ConsultarRotas consultarRotas;
     private ConsultarSlotsLivres consultarSlotsLivres;
     private LiberarPlanoVoo liberarPlanoVoo;
+    private CadastraPlanoVoo cadastraPlanoVoo;
+    private CancelaPlanoVoo cancelaPlanoVoo;
     
     @Autowired
     public CtrlCorridasController(
@@ -44,6 +49,22 @@ public class CtrlCorridasController {
         
         return liberarPlanoVoo.run(planoDeVoo);
     }
+    @PostMapping("/CadastrarPlano")
+    @CrossOrigin(origins = "*")
+    public void CadastrarPlanoVoo(@RequestBody final PlanoDeVoo planoDeVoo){
+        
+         cadastraPlanoVoo.run(planoDeVoo);
+    }
+
+    @PostMapping("/RemovePlano")
+    @CrossOrigin(origins = "*")
+    public boolean removePlano(@RequestBody final PlanoDeVoo planoDeVoo){
+        
+        return cancelaPlanoVoo.run(planoDeVoo);
+    }
+    
+
+
     @GetMapping("/slotsLivres")
     @CrossOrigin(origins = "*")
     public SlotsLivresDTO consultarSlotsLivres(@RequestParam int idAeroVia,@RequestParam Date horaPartida){

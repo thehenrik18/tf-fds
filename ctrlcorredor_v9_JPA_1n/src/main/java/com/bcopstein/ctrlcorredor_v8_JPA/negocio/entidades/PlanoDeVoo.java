@@ -3,11 +3,14 @@ package com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class PlanoDeVoo {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idVoo;
     Date data;
     int altitude;

@@ -5,6 +5,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.bcopstein.ctrlcorredor_v8_JPA.adaptadores.repositorios.IPlanoVooCRUD;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.AeroVia;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.OcupacaoAeroVia;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.PlanoDeVoo;
@@ -16,7 +17,7 @@ import com.bcopstein.ctrlcorredor_v8_JPA.negocio.repositorios.IRotaRepository;
 public class LiberarVooServico {
 
     private IRotaRepository rotaRepository;
-
+ 
     @Autowired
     public LiberarVooServico(IRotaRepository rotaRepository) {
         this.rotaRepository = rotaRepository;

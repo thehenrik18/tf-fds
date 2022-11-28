@@ -1,10 +1,11 @@
 package com.bcopstein.ctrlcorredor_v8_JPA.adaptadores.repositorios;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.OcupacaoAeroVia;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.repositorios.IocupacaoRepository;
-
+@Component
 public class OcupacaoRepository implements IocupacaoRepository{
     private IOcupacaoCRUD ocupacaoCRUD;
 
