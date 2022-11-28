@@ -26,12 +26,12 @@ public RotaDTO consultarRotas(String origem, String destino){
     List<Rota> rotas=rotaRepository.todas().stream()
     .filter(r->r.getOrigem().equals(origem))
     .filter(r->r.getDestino().equals(destino))
-    .toList();
+    .toList();;
 
     //cria uma lista que pega o nome dessas rotas
     List<String> nomesRotas=new ArrayList<String>();
     for(Rota rota:rotas){
-        nomesRotas.add(((Integer) rota.getIdRota()).toString());
+        nomesRotas.add(((Integer)rota.getIdRota()).toString());
     }
 
     //se a lista for vazia adiciona apenas mensagem de erro
