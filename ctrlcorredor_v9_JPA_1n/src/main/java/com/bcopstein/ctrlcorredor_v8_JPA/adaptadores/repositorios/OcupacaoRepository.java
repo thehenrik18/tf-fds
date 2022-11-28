@@ -18,5 +18,11 @@ public class OcupacaoRepository implements IocupacaoRepository{
         return this.ocupacaoCRUD.findById( idOcupacao);
     }
 
+    @Override
+    public void salvar(OcupacaoAeroVia ocupacao) {
+         this.ocupacaoCRUD.save(ocupacao);
+        
+    }
+
      
 }

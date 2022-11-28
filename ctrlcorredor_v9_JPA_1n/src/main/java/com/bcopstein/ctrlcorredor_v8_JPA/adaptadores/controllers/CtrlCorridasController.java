@@ -3,11 +3,17 @@ package com.bcopstein.ctrlcorredor_v8_JPA.adaptadores.controllers;
 import java.util.Date;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.ConsultarRotas;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.ConsultarSlotsLivres;
+import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.casosDeUso.LiberarPlanoVoo;
+import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.LiberarPlanoDTO;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.RotaDTO;
 import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.SlotsLivresDTO;
+import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.PlanoDeVoo;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +24,7 @@ public class CtrlCorridasController {
    
     private ConsultarRotas consultarRotas;
     private ConsultarSlotsLivres consultarSlotsLivres;
+    private LiberarPlanoVoo liberarPlanoVoo;
     
     @Autowired
     public CtrlCorridasController(
@@ -31,9 +38,15 @@ public class CtrlCorridasController {
         
         return consultarRotas.run(origem,destino);
     }
+    @PostMapping("/liberarPlano")
+    @CrossOrigin(origins = "*")
+    public LiberarPlanoDTO liberarPlanoDeVoo(@RequestBody final PlanoDeVoo planoDeVoo){
+        
+        return liberarPlanoVoo.run(planoDeVoo);
+    }
     @GetMapping("/slotsLivres")
     @CrossOrigin(origins = "*")
-    public SlotsLivresDTO consultarSlotsLivres(@RequestParam String idAeroVia,@RequestParam Date horaPartida){
+    public SlotsLivresDTO consultarSlotsLivres(@RequestParam int idAeroVia,@RequestParam Date horaPartida){
         
         return consultarSlotsLivres.run( idAeroVia, horaPartida);
     }

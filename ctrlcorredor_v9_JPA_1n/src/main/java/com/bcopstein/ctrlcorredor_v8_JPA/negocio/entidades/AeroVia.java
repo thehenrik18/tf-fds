@@ -13,8 +13,9 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class AeroVia {
-    @Id
-   public  String idAeroVia;
+   @Id
+   public  int idAeroVia;
+   public String nome;
    public  float LongOrigem;
    public float latiOrigem;
    public float LongDestino;
@@ -22,17 +23,19 @@ public class AeroVia {
    public float distancia;
    public int sentido;
 
-public AeroVia(String idAeroVia, float longOrigem, float latiOrigem, float longDestino, float latiDestino, float distancia,
-            int sentido) {
-        this.idAeroVia = idAeroVia;
-        LongOrigem = longOrigem;
-        this.latiOrigem = latiOrigem;
-        LongDestino = longDestino;
-        this.latiDestino = latiDestino;
-        this.distancia = distancia;
-        this.ocupacoes = new ArrayList<OcupacaoAeroVia>();
-        this.sentido = sentido;
+
+   public AeroVia(int idAeroVia, String nome, float longOrigem, float latiOrigem, float longDestino, float latiDestino,
+         float distancia, int sentido) {
+      this.idAeroVia = idAeroVia;
+      this.nome = nome;
+      LongOrigem = longOrigem;
+      this.latiOrigem = latiOrigem;
+      LongDestino = longDestino;
+      this.latiDestino = latiDestino;
+      this.distancia = distancia;
+      this.sentido = sentido;
     }
+
     public AeroVia(){
     }
     @OneToMany(fetch = FetchType.EAGER,
@@ -43,6 +46,9 @@ public AeroVia(String idAeroVia, float longOrigem, float latiOrigem, float longD
 
 public float getLatiDestino() {
     return latiDestino;
+}
+public void addOcupacao(OcupacaoAeroVia ocupacao){
+    this.ocupacoes.add(ocupacao);
 }
 
 public float getLatiOrigem() {
@@ -57,8 +63,11 @@ public float getLongOrigem() {
     public float getDistancia() {
         return distancia;
     }
-    public String getIdAeroVia() {
+    public int getIdAeroVia() {
         return idAeroVia;
+    }
+    public String getNome() {
+        return nome;
     }
     public List<OcupacaoAeroVia> getOcupacoes() {
         return ocupacoes;
