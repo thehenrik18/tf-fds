@@ -9,5 +9,4 @@ public interface IAeroviaRepository {
     //void salvarTodos(List<AeroVia> aerovias);
     AeroVia obterAeroVia(int idAeroVia);
 
-    List<Integer> ConsultarSlotsLivres(int idAeroVia, Date horaPartida);
 }

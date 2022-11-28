@@ -7,11 +7,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.bcopstein.ctrlcorredor_v8_JPA.aplicacao.dtos.SlotsLivresDTO;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.AeroVia;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.entidades.OcupacaoAeroVia;
 import com.bcopstein.ctrlcorredor_v8_JPA.negocio.repositorios.IAeroviaRepository;
-import com.bcopstein.ctrlcorredor_v8_JPA.negocio.servicos.ServicoAeroVia;
 
 @Component
 public class SlotsDTOServico {
@@ -50,7 +48,5 @@ public class SlotsDTOServico {
      //remove todos os elementos ocupados da lista de disponiveis
      disponiveis.removeAll(ocupados);
      return disponiveis;
-
-
     }
 }
